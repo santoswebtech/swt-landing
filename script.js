@@ -89,3 +89,17 @@ function closeModal() {
 function closeConsult() {
     document.getElementById('consultModal').style.display = 'none';
 }
+
+window.onscroll = function() {
+    showTopJumpLink()
+}
+
+function showTopJumpLink() {
+    let serviceAtTop = document.getElementById('services').getBoundingClientRect().top < 600;
+    console.log(serviceAtTop);
+    if(serviceAtTop === true) {
+        document.getElementById('topJumpLink').style.display = 'block';
+    } else {
+        document.getElementById('topJumpLink').style.display = 'none';
+    }
+}

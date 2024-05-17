@@ -16,12 +16,12 @@
     <!-- Navbar -->
     <header>
         <div>
-            <img src="./Assets/swtNoWords.png" alt="Logo for Santos Web Technologies">
+            <img id="logo" src="./Assets/swtNoWords.png" alt="Logo for Santos Web Technologies">
             <span>SANTOS WEB TECHNOLOGIES</span>
         </div>
         <nav id="nav">
             <a href="#about">ABOUT</a>
-            <a href="#services">SERVICES</a>
+            <a href="#serviceHeading">SERVICES</a>
             <a href="#pricing">PRICING</a>
             <a href="#faq">FAQ</a>
             <a onclick="openConsult()">CONTACT</a>
@@ -32,7 +32,7 @@
     </header>
     <nav id="mobileNav">
         <a href="#about" onclick="toggleNav()">ABOUT</a>
-        <a href="#services" onclick="toggleNav()">SERVICES</a>
+        <a href="#serviceHeading" onclick="toggleNav()">SERVICES</a>
         <a href="#pricing" onclick="toggleNav()">PRICING</a>
         <a href="#faq" onclick="toggleNav()">FAQ</a>
         <a onclick="openConsult()">Consult</a>
@@ -57,7 +57,7 @@
         <p style="padding: 20px;">As experts in the ever-evolving landscape of web development, Santos Web Technologies specializes in crafting immersive online experiences tailored to your unique vision and objectives. We combine cutting-edge technologies with creative flair to provide a comprehensive suite of services, including website/app development, maintenance, and bespoke customization. With a commitment to excellence and a passion for pushing boundaries, we're here to elevate your digital presence and propel your business forward in the digital age."</p>
     </section>
 
-    <h1 style="text-align: center; margin-top: 10%;">Services</h1>
+    <h1 id="serviceHeading" style="text-align: center; margin-top: 10%;">Services</h1>
     <div id="servicesBox">
         <section id="services">
             <div id="serviceCardWrapper">
@@ -227,6 +227,11 @@
             </div>
           </div>
     </section>
+
+    <a href="#logo" id="topJumpLink" >
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      <span style="display: block;">Top</span>
+    </a>
 
     <footer>
       <div id="socials">
