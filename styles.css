@@ -408,6 +408,7 @@ footer {
     .serviceCard {
         width: 300px;
         font-size: .7rem;
+        padding: 2vw;
     }
     #serviceModal {
         background-size: 320%;
@@ -448,7 +449,6 @@ footer {
         align-items: center;
     }
     .serviceCard {
-        padding: 5vw;
         width: 50vw;
     }
     #serviceModal>p {
