@@ -273,6 +273,10 @@ h1 {
     display: none;
 }
 
+#topJumpLink:hover {
+    background-color: rgb(194 213 255);
+}
+
 footer {
     background-color: rgb(0, 140, 255);
     color: white;
