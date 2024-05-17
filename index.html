@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santos Web Technologies</title>
+    <link rel="icon" type="image/x-icon" href="Assets/favicon.png">
+    <!-- Add your CSS link here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div>
+            <img src="./assets/swtNoWords.png" alt="Logo for Santos Web Technologies">
+            <span>SANTOS WEB TECHNOLOGIES</span>
+        </div>
+        <nav id="nav">
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#pricing">PRICING</a>
+            <a href="#faq">FAQ</a>
+            <a onclick="openConsult()">CONTACT</a>
+        </nav>
+        <a id="navToggle" href="javascript:void(0);" class="icon" onclick="toggleNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <nav id="mobileNav">
+        <a href="#about" onclick="toggleNav()">ABOUT</a>
+        <a href="#services" onclick="toggleNav()">SERVICES</a>
+        <a href="#pricing" onclick="toggleNav()">PRICING</a>
+        <a href="#faq" onclick="toggleNav()">FAQ</a>
+        <a onclick="openConsult()">Consult</a>
+    </nav>
+    
+    <section id="hero">
+        <div id="heroLeft">
+            <div>
+                <span><i class="fa-light fa-greater-than"></i>&nbsp;&nbsp;WEBSITE / APP DEVELOPMENT</span>
+                <span><i class="fa-light fa-greater-than"></i>&nbsp;&nbsp;CUSTOM STYLING / FUNCTIONALITY</span>
+                <span><i class="fa-light fa-greater-than"></i>&nbsp;&nbsp;SERVICE / DATA INTEGRATION</span>
+                <span><i class="fa-light fa-greater-than"></i>&nbsp;&nbsp;ACCESSIBILITY / SEO</span>
+            </div>
+            <p>How can we help you today?</p>
+            <a class="consultBtn" onclick="openConsult()">Free Consultation</a>
+        </div>
+        <div id="heroImage" src="Assets/laptop.jpg" alt="Laptop on a desk"></div>
+    </section>
+
+    <section id="about">
+        <h1 style="text-align: center; font-size: 2.5rem;">Who are we?</h1>
+        <p style="padding: 20px; font-size: 1.6rem;">As experts in the ever-evolving landscape of web development, Santos Web Technologies specializes in crafting immersive online experiences tailored to your unique vision and objectives. From sleek and responsive websites that captivate audiences to robust web applications that streamline business processes, we combine cutting-edge technologies with creative flair to bring your ideas to life. Whether you're a startup seeking a dynamic online presence or an established enterprise aiming to enhance application features, our comprehensive suite of services, including website development, maintenance, and bespoke customization, ensures that your online footprint stands out amidst the digital noise. With a commitment to excellence and a passion for pushing boundaries, we're here to elevate your digital presence and propel your business forward in the digital age."</p>
+    </section>
+
+    <h1 style="text-align: center; margin-top: 10%;">Services</h1>
+    <div id="servicesBox">
+        <section id="services">
+            <div id="serviceCardWrapper">
+                <div id="serviceCardBox">
+                    <div class="serviceCard" onclick="openModal(this)">App Development</div>
+                    <div class="serviceCard" onclick="openModal(this)">Website Development</div>
+                    <div class="serviceCard" onclick="openModal(this)">Website Maintenance</div>
+                </div>
+                <div id="serviceCardBox">
+                    <div class="serviceCard" onclick="openModal(this)">Custom Styling</div>
+                    <div class="serviceCard" onclick="openModal(this)">Custom Functionality</div>
+                    <div class="serviceCard" onclick="openModal(this)">Embedded Services</div>
+                </div>
+                <div id="serviceCardBox">
+                    <div class="serviceCard" onclick="openModal(this)">Accessibility</div>
+                    <div class="serviceCard" onclick="openModal(this)">SEO</div>
+                    <div class="serviceCard" onclick="openModal(this)">Data Integration</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <aside id="serviceModal">
+        <a id="modalClose" href="javascript:void(0);" class="icon" onclick="closeModal(this)">
+            <p>CLOSE &nbsp;&nbsp;<i class="fa-regular fa-x"></i></p>
+        </a>
+        <h2></h2>
+        <p></p>
+    </aside>
+
+    <section id="pricing">
+        <h1 style="text-align: center;">Pricing</h2>
+        <div id="pricingBox">
+            <div class="pricingCol" style="background-color: rgb(194 213 255);">
+                <div class="priceTag">$100/hr</div>
+                <div class="priceDesc">
+                    <ul>
+                        <li>Hourly Rate</li>
+                        <li>For simple updates to styling or content and those that only need occasional support</li>
+                        <li>Based on availability.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pricingCol" style="background-color: rgb(139 175 255);">
+                <div class="priceTag">$700/mo</div>
+                <div class="priceDesc">
+                    <ul>
+                        <li>Up to 8hrs of support</li>
+                        <li>For complex updates to styling/content or simple updates to functionality</li>
+                        <li>$88/hr for more time</li>
+                        <li>Higher prioritization/availability.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pricingCol" style="background-color: rgb(104 146 239);">
+                <div class="priceTag">$1200/mo</div>
+                <div class="priceDesc">
+                    <ul>
+                        <li>Up to 16hrs of support</li>
+                        <li>For frequent more advanced updates to styling/content or functionality</li>
+                        <li>$75/hr for more time</li>
+                        <li>Highest prioritization/availability.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <span style="text-align: center; margin-top: 20px; display: block;">*No Contracts. Cancel anytime</span>
+    </section>
+    <section style="
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    ">
+        <p>Click below to discuss how we can help you today.</p>
+        <a class="consultBtn" style="bottom: 0;" onclick="openConsult()">Free Consultation</a>
+    </section>
+
+    <aside id="consultModal">
+        <a id="consultClose" href="javascript:void(0);" class="icon" onclick="closeConsult(this)">
+            <p>CLOSE &nbsp;&nbsp;<i class="fa-regular fa-x"></i></p>
+        </a>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTOm5bVchqRZCAxS4Muar12C_pXbF00WUi56LRsc5dLMpn9g/viewform?embedded=true" width="100%" height="70%" frameborder="0" marginheight="0" marginwidth="0" onload="allowModalClose()">Loading…</iframe>
+    </aside>
+
+    <section id="faq">
+        <h1>FAQ</h1>
+        <p>Common questions and answers go here.</p>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Why not just hire a full-time web developer?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  The average salary for an experienced front end developer is around $130,000 plus benefits plus more, if you need to work with data or web/mobile applications. Also, you might not always have a full time work load for them to complete. Santos Web Technologies has over a decade of related experience, is a fraction of the cost and you can increase or decrease your support hours according to the work that you need completed.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Can you provide customization even if I'm using a CMS like shopify/wix?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Yes! A cms is just a prebuit website/application. All CMS' allow advanced customization that usually requires developer support. That's where we come in. Just let us know in your consultation form what CMS or other tools/tech you're trying to work with and we can help you put together your desired solution.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How long does it take to complete a project?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Simple styling/content updates can be completed in a few hours. Custom features such as pop up modals, data visualizations or integration with data/embedded services can take a 2+ days. Building websites like this one can take week or so. Web and mobile applications usually take a few months to build out an (MVP) minimum viable product. Being ready with exactly how you want things to look/function and providing all the related information like proper account access/credentials will speed up development time.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How do I request service?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Requesting service is easy. You can always go to our website and click on any of the <a class="consultBtn" style="bottom: 0;" onclick="openConsult()">Free Consultation</a> buttons. You can also email directly with your developer with any questions or requests for support.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    What if I'm not happy with the solution?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Sometimes things don't turn out exactly as expected or you may change your mind about development requirements along the way. No worries! We can continue to work together and find tune things until you are satisfied with the results. However, all payments are final due to the nature of the work.
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <footer>
+      <div id="socials">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+      <div id="footerText">Built by Santos Web Technologies.</div>
+      <div id="footerBtn"><a class="footerConsult" onclick="openConsult()">Free Consultation</a></div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
