@@ -148,6 +148,7 @@ h1 {
 #serviceCardBox {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .serviceCard {
