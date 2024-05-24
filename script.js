@@ -56,7 +56,7 @@ function openModal(e) {
         p.innerHTML = a11yText;
     }
 
-    if (btnTitle === 'SEO Optimization') {
+    if (btnTitle === 'SEO') {
         p.innerHTML = seoText;
     }
 
