@@ -112,7 +112,7 @@ h1 {
 #heroImage {
     height: 100vh;
     width: 50%;
-    background: linear-gradient(90deg, white, rgba(255, 255, 255, .9), rgba(255, 255, 255, .6), rgba(255, 255, 255, .3), rgba(255, 255, 255, 0)), url(Assets/laptop.jpg);
+    background: linear-gradient(90deg, white, white, rgba(255, 255, 255, .9), rgba(255, 255, 255, .6), rgba(255, 255, 255, .3), rgba(255, 255, 255, 0)), url(Assets/laptop.jpg);
     background-repeat: no-repeat;
     background-size: 140%;
     background-position-x: -200px;
@@ -348,6 +348,9 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+    body {
+        width: 98%;
+    }
     #nav { 
         display: none;
     }
@@ -446,12 +449,25 @@ footer {
     }
 }
 
+@media screen and (max-width: 370px) {
+    body {
+        width: 103%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    body {
+        width: 107%;
+    }
+}
+
 @media screen and (max-width: 600px) {
     #serviceCardBox {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    
     .serviceCard {
         width: 50vw;
     }
