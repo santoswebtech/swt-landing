@@ -297,6 +297,10 @@ footer {
     width: 150px;
 }
 
+.socialLink {
+    color: white;
+}
+
 #footerText {
     text-align: center;
     font-size: 1.1rem;
