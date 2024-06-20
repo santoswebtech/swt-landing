@@ -15,7 +15,7 @@ header {
     margin-bottom: 3px;
     position: relative;
     z-index: 1;
-    color: rgb(0, 0, 255);
+    color: rgb(0, 140, 255);
 }
 
 header>div {
@@ -35,7 +35,7 @@ header>div>img {
 }
 
 #nav>a {
-    color: rgb(0, 0, 197);
+    color: rgb(0, 140, 255);
     text-decoration: none;
     padding: 15px;
     border-radius: 3px;
