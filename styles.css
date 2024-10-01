@@ -326,6 +326,20 @@ footer {
     color: white;
 }
 
+#privacyModal {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    padding: 5% 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    overflow: scroll;
+}
+
 @media screen and (max-width: 1200px) {
     #heroLeft {
         font-size: 1.2rem;
