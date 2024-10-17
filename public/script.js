@@ -74,6 +74,11 @@ function openModal(e) {
 function openConsult() {
     let modal = document.getElementById('consultModal');
     modal.style.display = 'flex';
+    window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          modal.style.display = 'none'
+        }
+    })
 }
 function allowModalClose() {
     let modal = document.getElementById('consultModal');

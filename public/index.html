@@ -137,7 +137,29 @@
         <a id="consultClose" href="javascript:void(0);" class="icon" onclick="closeConsult(this)">
             <p>CLOSE &nbsp;&nbsp;<i class="fa-regular fa-x"></i></p>
         </a>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTOm5bVchqRZCAxS4Muar12C_pXbF00WUi56LRsc5dLMpn9g/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" onload="allowModalClose()">Loading…</iframe>
+        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTOm5bVchqRZCAxS4Muar12C_pXbF00WUi56LRsc5dLMpn9g/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" onload="allowModalClose()">Loading…</iframe> -->
+         
+        <form action="https://formsubmit.co/0c6c4bac964a2ee1c815103558b8c1cd" method="POST" style="width: 90%; max-width: 600px;">
+          <div class="mb-3 row">
+            <div class="col-6">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="name" name="name" class="form-control" id="name" required>
+            </div>
+            <div class="col-6">
+              <label for="phone" class="form-label">Phone #</label>
+              <input type="phone" name="phone" class="form-control" id="phone" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" id="description" style="height: 150px; width: 100%;" placeholder="What are you trying to accomplish?&nbsp;&nbsp;What do you need help with?&nbsp;&nbsp;What tools/technology are you working with?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary">Submit</button>
+        </form>
     </aside>
 
     <section id="faq">
