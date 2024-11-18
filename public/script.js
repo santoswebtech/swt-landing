@@ -117,3 +117,12 @@ function openPrivacy() {
         }
     })
 }
+function openDemo() {
+    let modal = document.getElementById('demoModal');
+    modal.style.display = 'flex';
+    window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          modal.style.display = 'none'
+        }
+    })
+}

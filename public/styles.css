@@ -239,7 +239,35 @@ h1 {
 .priceDesc {
     margin: 30px 30px 0;
 }
-#consultModal {
+
+#demo-toggle {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+}
+
+#demo-toggle:hover {
+    color: rgb(0, 0, 197);
+}
+
+#demoModal {
+    overflow: scroll;
+}
+
+#demoTiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.demoTile {
+    max-width: 300px;
+    max-height: 100px;
+    margin: 10px;
+}
+
+#consultModal, #demoModal {
     position: fixed;
     top: 0;
     height: 100vh;
