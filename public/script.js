@@ -101,7 +101,6 @@ window.onscroll = function() {
 
 function showTopJumpLink() {
     let serviceAtTop = document.getElementById('services').getBoundingClientRect().top < 600;
-    console.log(serviceAtTop);
     if(serviceAtTop === true) {
         document.getElementById('topJumpLink').style.display = 'block';
     } else {
