@@ -262,8 +262,8 @@ h1 {
 }
 
 .demoTile {
-    max-width: 300px;
-    max-height: 100px;
+    width: 300px;
+    height: 150px;
     margin: 10px;
 }
 
