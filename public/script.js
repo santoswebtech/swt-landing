@@ -94,6 +94,9 @@ function closeModal() {
 function closeConsult() {
     document.getElementById('consultModal').style.display = 'none';
 }
+function closeDemo() {
+    document.getElementById('demoModal').style.display = 'none';
+}
 
 window.onscroll = function() {
     showTopJumpLink()
@@ -101,7 +104,6 @@ window.onscroll = function() {
 
 function showTopJumpLink() {
     let serviceAtTop = document.getElementById('services').getBoundingClientRect().top < 600;
-    console.log(serviceAtTop);
     if(serviceAtTop === true) {
         document.getElementById('topJumpLink').style.display = 'block';
     } else {
@@ -111,6 +113,15 @@ function showTopJumpLink() {
 
 function openPrivacy() {
     let modal = document.getElementById('privacyModal');
+    modal.style.display = 'flex';
+    window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          modal.style.display = 'none'
+        }
+    })
+}
+function openDemo() {
+    let modal = document.getElementById('demoModal');
     modal.style.display = 'flex';
     window.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
