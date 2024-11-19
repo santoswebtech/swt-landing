@@ -94,6 +94,9 @@ function closeModal() {
 function closeConsult() {
     document.getElementById('consultModal').style.display = 'none';
 }
+function closeDemo() {
+    document.getElementById('demoModal').style.display = 'none';
+}
 
 window.onscroll = function() {
     showTopJumpLink()
