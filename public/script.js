@@ -121,6 +121,7 @@ function openPrivacy() {
     })
 }
 function openDemo() {
+    toggleNav();
     let modal = document.getElementById('demoModal');
     modal.style.display = 'flex';
     window.addEventListener('keydown', function (event) {
