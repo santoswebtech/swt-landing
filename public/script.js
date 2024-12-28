@@ -121,7 +121,12 @@ function openPrivacy() {
     })
 }
 function openDemo() {
-    toggleNav();
+    let x = document.querySelector('#navToggle>i');
+    let y = document.querySelector('#mobileNav');
+    if (x.className === 'fa-regular fa-x') {
+        x.className = 'fa fa-bars';
+        y.style.display = 'none';
+    }
     let modal = document.getElementById('demoModal');
     modal.style.display = 'flex';
     window.addEventListener('keydown', function (event) {
