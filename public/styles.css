@@ -245,6 +245,7 @@ h1 {
     text-align: center;
     text-decoration: none;
     color: rgb(0, 140, 255);
+    margin-top: 50px;
 }
 
 #demo-toggle:hover {
