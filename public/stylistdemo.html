@@ -25,6 +25,7 @@
         color: var(--primaryFont);
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
     }
     #mainwrapper {
         max-width: 1200px;
@@ -148,6 +149,22 @@
         bottom: 50px;
         font-size: 40px;
     }
+    #services {
+        margin-bottom: 50px;
+    }
+    .serviceTitle {
+        position: absolute;
+        top: 83px;
+        color: white;
+        font-weight: 600;
+        font-size: 50px;
+        z-index: 1;
+    }
+    .card-img-top {
+        filter: brightness(.5);
+        height: 250px;
+        border-radius: 10px 10px 0 0;
+    }
 
     @keyframes bounce2 {
         0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
@@ -159,8 +176,10 @@
         text-align: center;
     }
     footer {
-        padding: 50px 0
-        ;
+        padding: 50px 0;
+        background-color: var(--secondary);
+        color: var(--primary);
+        width: 100vw;
     }
     @media screen and (max-width: 768px) {
         .video-container {
@@ -207,49 +226,90 @@
 <section id="hero">
     <!-- <img id="herologo" src="./Assets/logo.jpg" alt="Logo for JG"> -->
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/_GSc3uAm8rQ?autoplay=1&mute=1&loop=1&playlist=_GSc3uAm8rQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/_GSc3uAm8rQ?autoplay=1&mute=1&start=7&end=86&loop=1&playlist=_GSc3uAm8rQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
         <i class="fa fa-angle-double-down blinking-chevron" aria-hidden="true"></i>
   </section>
   <div id="mainwrapper">
-      <section id="about">
-        <h1>About</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, recusandae perferendis. Quos temporibus est officiis cupiditate provident enim harum earum, id ab error deleniti nam ullam sit eligendi, delectus cum.</p>
-    </section>
-    <aside id="contactModal">
-        <a id="contactClose" href="javascript:void(0);" class="icon" onclick="closeContact(this)">
-            <p>CLOSE &nbsp;&nbsp;<i class="fa-regular fa-x"></i></p>
-          </a>
-          <form target="_blank" action="" method="POST" style="width: 90%; max-width: 600px;">
-            <div class="mb-3 row">
-              <div class="col-6">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="name" name="name" class="form-control" id="name" required>
-              </div>
-              <div class="col-6">
-                <label for="phone" class="form-label">Phone #</label>
-                <input type="phone" name="phone" class="form-control" id="phone" required>
-              </div>
+        <section id="about">
+            <h1>About</h1>
+            <p>We believe a great haircut is more than just a style—it’s an experience. Our barbers combine classic techniques with modern trends to deliver cuts, fades, and shaves that leave you looking sharp and feeling confident. Whether you’re here for a quick trim or a full grooming session, our goal is to provide precision, comfort, and service you can count on.</p>
+        </section>
+        <section id="services" class="text-center">
+            <div class="row">
+                <div class="col col-md-4">
+                    <div class="card" style="border-radius: 10px;">
+                        <div class="serviceTitle" style="left: 30%;">Haircut</div>
+                        <img class="card-img-top" src="./Assets/hairfade.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4">
+                    <div class="card" style="border-radius: 10px;">
+                        <div class="serviceTitle" style="left: 12%;">Trim & Shave</div>
+                        <img class="card-img-top" src="./Assets/beardtrim.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4">
+                    <div class="card" style="border-radius: 10px;">
+                        <div class="serviceTitle" style="left: 18%;">Full Service</div>
+                        <img class="card-img-top" src="./Assets/barberfull.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" name="email" class="form-control" id="email" required>
+        </section>
+        <aside id="contactModal">
+            <a id="contactClose" href="javascript:void(0);" class="icon" onclick="closeContact(this)">
+                <p>CLOSE &nbsp;&nbsp;<i class="fa-regular fa-x"></i></p>
+            </a>
+            <form target="_blank" action="" method="POST" style="width: 90%; max-width: 600px;">
+                <div class="mb-3 row">
+                <div class="col-6">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="name" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="col-6">
+                    <label for="phone" class="form-label">Phone #</label>
+                    <input type="phone" name="phone" class="form-control" id="phone" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea name="message" id="message" style="height: 150px; width: 100%;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary" disabled>Submit</button>
+            </form>
+        </aside>
+    </div>
+    <footer>
+        <div class="row">
+            <div id="socials" class="col-md-4">
+                <a class="socialLink" href="https://www.facebook.com/profile.php?id=61560946928748"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="socialLink" href="https://www.instagram.com/santoswebtech"><i class="fa-brands fa-instagram"></i></a>
+                <a class="socialLink" href="https://www.youtube.com/@SantosWebTech"><i class="fa-brands fa-youtube"></i></a>
             </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea name="message" id="message" style="height: 150px; width: 100%;"></textarea>
+            <div class="col-md-4">
+                <h3>Demo Stylist Site</h3>
             </div>
-            <button type="submit" class="btn btn-secondary" disabled>Submit</button>
-          </form>
-    </aside>
-    <footer class="text-center">
-      <h3>JK Commercial Services LLC</h3>
+            <div id="footerBtn" class="col-md-4"><a onclick="openContact()">Request Service</a></div>
+        </div>
     </footer>
-  </div>
   <script>
     function showBlinkingChevron() {
         const chevron = document.querySelector('.blinking-chevron');
-        const heightLimit = window.innerHeight * .8;
+        const heightLimit = window.innerHeight * .7;
         if (chevron.getBoundingClientRect().top < heightLimit) {
             chevron.style.opacity = 0;
         } else {
