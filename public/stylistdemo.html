@@ -12,291 +12,346 @@
   <link href="https://fonts.googleapis.com/css2?family=Sarina&display=swap" rel="stylesheet">
   
 
-  <style>
-    :root {
-    --primary: white;
-    --secondary: black;
-    --primaryFont: black;
-    --secondaryFont: rgb(90, 90, 90);
+    <style>
+        :root {
+        --primary: white;
+        --secondary: black;
+        --primaryFont: black;
+        --secondaryFont: rgb(90, 90, 90);
 
-    }
-    body {
-        background-color: var(--primary);
-        color: var(--primaryFont);
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-    #mainwrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-        padding: 0 15px;
-        background-color: var(--secondary);
-    }
-    header>div {
-        display: flex;
-        align-items: center;
-        font-size: 1rem;
-        font-weight: 800;
-    }
-    header>div>img {
-        width: 60px;
-    }
-    #logo {
-        height: 35px;
-        width: 40px;
-        border-radius: 50%;
-        margin: 10px;
-    }
-    #nav>a {
-        color: var(--primary);
-        text-decoration: none;
-        padding: 10px;
-        font-size: 1rem;
-        margin: 3px;
-    }
-    #nav>a:hover {
-        color: var(--secondaryFont);
-        font-weight: bold;
-    }
-    #navToggle {
-        color: var(--primary)
-    }
-    #mobileNav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        background: white;
-        width: 100vw;
-        height: 100vh;
-        z-index: 1;
-    }
-    #mobileNav>a {
-        padding: 10px 0;
-        color: var(--primaryFont);
-        text-decoration: none;
-    }
-    #mobileNav>a:hover {
-        color: var(--secondaryFont);
-        font-weight: bold;
-    }
-    #contactModal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        background-color: var(--primary);
-        padding: 5% 0;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        z-index: 2;
-        overflow: scroll;
-    }
-    #contactModal>a {
-        color: var(--primaryFont);
-        text-decoration: none;
-        padding: 10px;
-        font-size: 1rem;
-        margin: 3px;
-    }
-    #contactModal>a:hover {
-        color: var(--secondary);
-        font-weight: bold;
-    }
-    #closeContact {
-        text-decoration: none;
-        max-width: 110px;
-        z-index: 1;
-    }
-    #hero {
-        text-align: center;
-    }
-    /* #herologo {
-        margin-top: 80px;
-        border-radius: 50%;
-        height: 185px;
-        width: 185px;
-    } */
-    .video-container {
-        position: relative; /* Establishes a positioning context for the iframe */
-        width: 100%; /* Ensures the container takes full available width */
-        padding-bottom: 56.25%; /* For a 16:9 aspect ratio (9 / 16 = 0.5625) */
-        height: 0; /* Collapses the container's height, relying on padding-bottom */
-        overflow: hidden; /* Hides any overflow if the iframe somehow exceeds the container */
-    }
-
-    .video-container iframe {
-        position: absolute; /* Positions the iframe relative to the container */
-        top: -56px;
-        left: 0;
-        width: 100%; /* Makes the iframe fill the container's width */
-        height: 100%; /* Makes the iframe fill the container's height */
-    }
-    .blinking-chevron {
-        animation: bounce2 2s ease infinite;
-        color: white;
-        position: absolute;
-        bottom: 50px;
-        font-size: 40px;
-    }
-    #services {
-        margin-bottom: 50px;
-    }
-    .serviceTitle {
-        position: absolute;
-        top: 83px;
-        color: white;
-        font-weight: 600;
-        font-size: 50px;
-        z-index: 1;
-    }
-    .card {
-        height: 350px;
-        border-radius: 10px;
-    }
-    .card-img-top {
-        filter: brightness(.5);
-        height: 250px;
-        border-radius: 10px 10px 0 0;
-    }
-
-    @keyframes bounce2 {
-        0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-        40% {transform: translateY(-10px);}
-        60% {transform: translateY(-5px);}
-    }
-    #about {
-        margin: 5%;
-        text-align: center;
-    }
-    footer {
-        padding: 50px 0;
-        background-color: var(--secondary);
-        color: var(--primary);
-        width: 100vw;
-    }
-    @media screen and (max-width: 768px) {
-        .video-container {
+        }
+        body {
+            background-color: var(--primary);
+            color: var(--primaryFont);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .centered1200 {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: relative;
-            width: 380vw;
-            height: 205vw;
-            overflow: hidden;
+            z-index: 1;
+            padding: 0 15px;
+            background-color: var(--secondary);
         }
+        header>div {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+        header>div>img {
+            width: 60px;
+        }
+        #logo {
+            height: 35px;
+            width: 40px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        #nav>a {
+            color: var(--primary);
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1rem;
+            margin: 3px;
+        }
+        #nav>a:hover {
+            color: var(--secondaryFont);
+            font-weight: bold;
+        }
+        #navToggle {
+            color: var(--primary)
+        }
+        #mobileNav {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background: white;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+        #mobileNav>a {
+            padding: 10px 0;
+            color: var(--primaryFont);
+            text-decoration: none;
+        }
+        #mobileNav>a:hover {
+            color: var(--secondaryFont);
+            font-weight: bold;
+        }
+        #contactModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: var(--primary);
+            padding: 5% 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            overflow: scroll;
+        }
+        #contactModal>a {
+            color: var(--primaryFont);
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1rem;
+            margin: 3px;
+        }
+        #contactModal>a:hover {
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        #closeContact {
+            text-decoration: none;
+            max-width: 110px;
+            z-index: 1;
+        }
+        #hero {
+            text-align: center;
+        }
+        /* #herologo {
+            margin-top: 80px;
+            border-radius: 50%;
+            height: 185px;
+            width: 185px;
+        } */
+        .video-container {
+            position: relative; /* Establishes a positioning context for the iframe */
+            width: 100%; /* Ensures the container takes full available width */
+            padding-bottom: 56.25%; /* For a 16:9 aspect ratio (9 / 16 = 0.5625) */
+            height: 0; /* Collapses the container's height, relying on padding-bottom */
+            overflow: hidden; /* Hides any overflow if the iframe somehow exceeds the container */
+        }
+
         .video-container iframe {
-            position: absolute;
+            position: absolute; /* Positions the iframe relative to the container */
             top: -56px;
-            left: -36%;
-            width: 100%;
-            height: 100%;
+            left: 0;
+            width: 100%; /* Makes the iframe fill the container's width */
+            height: 100%; /* Makes the iframe fill the container's height */
         }
-    }
-  </style>
+        .blinking-chevron {
+            animation: bounce2 2s ease infinite;
+            color: white;
+            position: absolute;
+            bottom: 50px;
+            font-size: 40px;
+        }
+        #services {
+            margin-bottom: 50px;
+        }
+        .serviceTitle {
+            position: absolute;
+            top: 83px;
+            color: white;
+            font-weight: 600;
+            font-size: 50px;
+            z-index: 1;
+        }
+        .card {
+            height: 350px;
+            width: 350px;
+            border-radius: 10px;
+        }
+        .card-img-top {
+            filter: brightness(.5);
+            height: 250px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        @keyframes bounce2 {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+        footer {
+            padding: 50px 0;
+            background-color: var(--secondary);
+            color: var(--primary);
+            width: 100vw;
+        }
+        @media screen and (max-width: 768px) {
+            .video-container {
+                position: relative;
+                width: 380vw;
+                height: 205vw;
+                overflow: hidden;
+            }
+            .video-container iframe {
+                position: absolute;
+                top: -56px;
+                left: -36%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .star-rating {
+            display: flex;
+            align-items: center;
+            font-size: 40px; /* Adjust star size */
+        }
+
+        .star {
+            color: #ccc; /* Default star color (unfilled) */
+            margin-right: 2px;
+        }
+
+        .star.filled {
+            color: black; /* Filled star color */
+        }
+        #reviews {
+            background: url(./Assets/barberTools.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .review-text {
+           font-size: 25px;
+        }
+        #reviews .card {
+            height: 300px;
+            color: black;
+        }
+    </style>
 
   
 </head>
 <body>
-  <header>
+    <header>
     <!-- Navbar -->
-      <div>
+        <div>
         <a href="./index.html">
           <img id="logo" src="./Assets/opened-scissors-white.png" alt="Stylist Logo">
         </a>
         <span style="color: white; font-family: Sarina, cursive; font-weight: 400; font-style: normal; font-size: 23px;">Stylist Site</span>
-      </div>
-      <nav id="nav" class="d-none d-md-flex">
+        </div>
+        <nav id="nav" class="d-none d-md-flex">
           <a href="./index.html">HOME</a>
           <a href="#about">ABOUT</a>
           <a onclick="openContact()">CONTACT</a>
-      </nav>
-      <a id="navToggle" href="javascript:void(0);" class="icon d-md-none" onclick="toggleNav()">
-          <i class="fa fa-bars"></i>
-      </a>
-  </header>
-  <nav id="mobileNav">
-    <a href="./index.html" onclick="toggleNav()">HOME</a>
-    <a href="#about" onclick="toggleNav()">ABOUT</a>
-    <a onclick="openContact()">CONTACT</a>
-</nav>
-<section id="hero">
-    <!-- <img id="herologo" src="./Assets/logo.jpg" alt="Logo for JG"> -->
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/_GSc3uAm8rQ?autoplay=1&mute=1&start=7&end=86&loop=1&playlist=_GSc3uAm8rQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+        </nav>
+        <a id="navToggle" href="javascript:void(0);" class="icon d-md-none" onclick="toggleNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <nav id="mobileNav">
+        <a href="./index.html" onclick="toggleNav()">HOME</a>
+        <a href="#about" onclick="toggleNav()">ABOUT</a>
+        <a onclick="openContact()">CONTACT</a>
+    </nav>
+    <section id="hero">
+        <!-- <img id="herologo" src="./Assets/logo.jpg" alt="Logo for JG"> -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/_GSc3uAm8rQ?autoplay=1&mute=1&start=7&end=86&loop=1&playlist=_GSc3uAm8rQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         <i class="fa fa-angle-double-down blinking-chevron" aria-hidden="true"></i>
-  </section>
-  <div id="mainwrapper">
-        <section id="about">
-            <h1>About</h1>
-            <p>We believe a great haircut is more than just a style—it’s an experience. Our barbers combine classic techniques with modern trends to deliver cuts, fades, and shaves that leave you looking sharp and feeling confident. Whether you’re here for a quick trim or a full grooming session, our goal is to provide precision, comfort, and service you can count on.</p>
-        </section>
-        <section id="services" class="text-center">
-            <div class="row">
-                <div class="col col-md-4">
-                    <div class="card">
-                        <div class="serviceTitle" style="left: 30%;">Haircut</div>
-                        <img class="card-img-top" src="./Assets/hairfade.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text">From classic cuts to the latest styles, our barbers deliver sharp, precise haircuts tailored to your look.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-md-4">
-                    <div class="card">
-                        <div class="serviceTitle" style="left: 12%;">Trim & Shave</div>
-                        <img class="card-img-top" src="./Assets/beardtrim.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text">Keep your beard and neckline in perfect shape with a detailed trim and clean, refreshing shave.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-md-4">
-                    <div class="card">
-                        <div class="serviceTitle" style="left: 18%;">Full Service</div>
-                        <img class="card-img-top" src="./Assets/barberfull.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text">Keep your beard and neckline in perfect shape with a detailed trim and clean, refreshing shave.</p>
-                        </div>
-                    </div>
+    </section>
+    <section id="about" class="centered1200 text-center mb-5">
+        <h1>About</h1>
+        <p>We believe a great haircut is more than just a style—it’s an experience. Our barbers combine classic techniques with modern trends to deliver cuts, fades, and shaves that leave you looking sharp and feeling confident. Whether you’re here for a quick trim or a full grooming session, our goal is to provide precision, comfort, and service you can count on.</p>
+    </section>
+    <section id="services" class="text-center centered1200 mb-5">
+        <h1>Services</h1>
+
+        <div class="d-flex flex-column flex-md-row justify-content-md-between mb-5 mt-3">
+            <div class="card mb-5 mb-md-0">
+                <div class="serviceTitle" style="left: 25%;">Haircut</div>
+                <img class="card-img-top" src="./Assets/hairfade.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">From classic cuts to the latest styles, our barbers deliver sharp, precise haircuts tailored to your look.</p>
                 </div>
             </div>
-        </section>
-        <aside id="contactModal">
-            <a id="contactClose" href="javascript:void(0);" class="icon" onclick="closeContact(this)">
-                <p>CLOSE &nbsp;&nbsp;<i class="fa-regular fa-x"></i></p>
-            </a>
-            <form target="_blank" action="" method="POST" style="width: 90%; max-width: 600px;">
-                <div class="mb-3 row">
-                <div class="col-6">
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="name" name="name" class="form-control" id="name" required>
+            <div class="card mb-5 mb-md-0">
+                <div class="serviceTitle" style="left: 4%;">Trim & Shave</div>
+                <img class="card-img-top" src="./Assets/beardtrim.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Keep your beard and neckline in perfect shape with a detailed trim and clean, refreshing shave.</p>
                 </div>
-                <div class="col-6">
-                    <label for="phone" class="form-label">Phone #</label>
-                    <input type="phone" name="phone" class="form-control" id="phone" required>
+            </div>
+            <div class="card mb-5 mb-md-0">
+                <div class="serviceTitle" style="left: 10%;">Full Service</div>
+                <img class="card-img-top" src="./Assets/barberfull.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Keep your beard and neckline in perfect shape with a detailed trim and clean, refreshing shave.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="reviews" class="text-center">
+        <h1>Reviews</h1>
+        <div class="d-flex flex-column flex-md-row justify-content-md-between mt-3 centered1200">
+                <div class="card p-3 mb-5 mb-md-0">
+                    <div class="star-rating mb-3 justify-content-center">
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                    </div>
+                    <p class="review-text">"Best cut in town. Clean fades and great vibes."<br>- Justin P.</p>
                 </div>
-                <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" class="form-control" id="email" required>
+                <div class="card p-3 mb-5 mb-md-0">
+                    <div class="star-rating mb-3 justify-content-center">
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                    </div>
+                    <p class="review-text">"Booked online, in and out fast. Loved the hot towel shave!"<br>- Maria L.</p>
                 </div>
-                <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea name="message" id="message" style="height: 150px; width: 100%;"></textarea>
+                <div class="card p-3 mb-5 mb-md-0">
+                    <div class="star-rating mb-3 justify-content-center">
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                    </div>
+                    <p class="review-text">They really listened to what I wanted. My go-to spot now."<br>- Andre C.</p>
                 </div>
-                <button type="submit" class="btn btn-secondary" disabled>Submit</button>
-            </form>
-        </aside>
-    </div>
+        </div>
+    </section>
+    <aside id="contactModal">
+        <a id="contactClose" href="javascript:void(0);" class="icon" onclick="closeContact(this)">
+            <p>CLOSE &nbsp;&nbsp;<i class="fa-regular fa-x"></i></p>
+        </a>
+        <form target="_blank" action="" method="POST" style="width: 90%; max-width: 600px;">
+            <div class="mb-3 row">
+            <div class="col-6">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="name" name="name" class="form-control" id="name" required>
+            </div>
+            <div class="col-6">
+                <label for="phone" class="form-label">Phone #</label>
+                <input type="phone" name="phone" class="form-control" id="phone" required>
+            </div>
+            </div>
+            <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" id="message" style="height: 150px; width: 100%;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary" disabled>Submit</button>
+        </form>
+    </aside>
     <footer>
         <div class="row">
             <div id="socials" class="col-md-4">
