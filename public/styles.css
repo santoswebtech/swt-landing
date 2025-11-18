@@ -293,6 +293,12 @@ h1 {
     width: 100%;
 }
 
+#thanks {
+    color: rgb(0, 140, 255);
+    margin: 50px 0;
+    text-align: center;
+}
+
 #topJumpLink {
     text-decoration: none;
     background: rgb(0, 140, 255);
