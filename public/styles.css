@@ -374,8 +374,16 @@ footer {
 }
 
 #footerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     text-align: center;
     font-size: 1.1rem;
+    background: white;
+    border-radius: 999px;
+    padding: 8px 16px;
+    color: rgb(0, 140, 255);
 }
 
 .footerConsult {
