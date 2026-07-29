@@ -3,7 +3,7 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 20px;
-    color: #000000;
+    color: #2b67a1;
     margin: 0;
     overflow-x: hidden;
 }
@@ -16,7 +16,7 @@ header {
     margin-bottom: 3px;
     position: relative;
     z-index: 1;
-    color: rgb(0, 140, 255);
+    color: #1c78d3;
 }
 
 header>div {
@@ -36,7 +36,7 @@ header>div>img {
 }
 
 #nav>a {
-    color: rgb(0, 140, 255);
+    color: #1c78d3;
     text-decoration: none;
     padding: 15px;
     border-radius: 3px;
@@ -44,8 +44,8 @@ header>div>img {
 }
 
 #nav>a:hover {
-    background-color: rgb(0, 140, 255);
-    color: white;
+    background-color: rgba(28, 120, 211, 0.08);
+    color: inherit;
 }
 
 #navToggle, #mobileNav { 
@@ -69,7 +69,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     width: 50%;
-    color: rgb(0, 140, 255);
+    color: #2b67a1;
     font-size: 1.5rem;
 }
 #heroLeft>div {
@@ -96,7 +96,7 @@ h1 {
     text-decoration: none;
     height: 50px;
     color: white;
-    background: linear-gradient(135deg, #5fa4ff 0%, #2a88ff 45%, #0f6edb 100%);
+    background: linear-gradient(135deg, #4f83e6 0%, #2369c9 45%, #0c57b0 100%);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.35);
     padding: 0 15px;
@@ -108,7 +108,7 @@ h1 {
 }
 
 .consultBtn:hover {
-    background: linear-gradient(135deg, #7db7ff 0%, #3d95ff 45%, #1170d7 100%);
+    background: linear-gradient(135deg, #6aa6ff 0%, #2f7bd6 45%, #0d5fb0 100%);
     color: white;
 }
 
@@ -178,7 +178,7 @@ h1 {
     border-radius: 20px;
     font-size: 1.05rem;
     font-weight: 600;
-    color: #1d3557;
+    color: #2b67a1;
     box-shadow: 0 12px 30px rgba(2, 8, 23, 0.22);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
@@ -188,6 +188,42 @@ h1 {
     box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
     border-color: rgb(0, 140, 255);
     cursor: pointer;
+}
+
+#faq {
+    max-width: 1100px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* FAQ / Accordion fixes: ensure Bootstrap accordion matches site styles */
+.accordion {
+    max-width: 100%;
+}
+.accordion-item {
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+.accordion-button {
+    background: linear-gradient(135deg, #ffffff 0%, #f3f8ff 100%);
+    color: #2b67a1;
+    font-weight: 600;
+    border: none;
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #dfefff 0%, #cfe8ff 100%);
+    color: #0b4f88;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-body {
+    background: white;
+    color: #1f486f;
+    padding: 1rem;
 }
 
 @keyframes scrollServices {
@@ -254,7 +290,7 @@ h1 {
     border: 1px solid;
     border-radius: 30px;
     padding: 15px;
-    color: #292929;
+    color: #1f486f;
 }
 
 .priceTag {
@@ -277,7 +313,7 @@ h1 {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: rgb(0, 140, 255);
+    color: #2b67a1;
     margin-top: 50px;
 }
 
@@ -317,17 +353,18 @@ h1 {
     z-index: 1;
 }
 
-#faq {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 15%;
+#nav>a {
+    color: #2b67a1;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 3px;
+    font-size: 1rem;
 }
 
-.accordion {
-    width: 100%;
+#nav>a:hover {
+    background-color: rgba(43, 103, 161, 0.08);
+    color: inherit;
 }
-
 #thanks {
     color: rgb(0, 140, 255);
     margin: 35vh 0;
@@ -354,8 +391,8 @@ h1 {
 }
 
 footer {
-    background: linear-gradient(135deg, #3b8ef2 0%, #1f78e8 45%, #0d5ebb 100%);
-    color: white;
+    background: linear-gradient(135deg, #dfefff 0%, #cfe8ff 45%, #b6d8ff 100%);
+    color: #1c78d3;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -370,7 +407,7 @@ footer {
 }
 
 .socialLink {
-    color: white;
+    color: #1c78d3;
 }
 
 #footerText {
@@ -387,8 +424,8 @@ footer {
 }
 
 .footerConsult {
-    background: linear-gradient(135deg, #ffffff 0%, #eef6ff 100%);
-    color: rgb(0 127 232);
+    background: linear-gradient(135deg, #f6fbff 0%, #e6f4ff 100%);
+    color: #0b4f88;
     font-weight: 500;
     padding: 10px 15px;
     text-decoration: none;
