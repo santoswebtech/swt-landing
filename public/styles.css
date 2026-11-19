@@ -412,15 +412,46 @@ footer {
 
 #footerText {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 4px;
     text-align: center;
     font-size: 1.1rem;
     background: white;
     border-radius: 999px;
     padding: 8px 16px;
     color: rgb(0, 140, 255);
+}
+
+.footerBrandStack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.footerBrand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footerBrand img {
+    height: 48px;
+    width: auto;
+}
+
+.footerLegalLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.footerLegalLinks a {
+    color: #0b4f88;
 }
 
 .footerConsult {
@@ -442,6 +473,65 @@ footer {
 .footerConsult:hover {
     background: linear-gradient(135deg, #f4f9ff 0%, #dceeff 100%);
     color: rgb(0, 140, 255);
+}
+
+.footerTerms {
+    color: #0b4f88;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.footerTerms:hover {
+    color: rgb(0, 140, 255);
+}
+
+.termsPage {
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    color: #2b67a1;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.termsPage h1 {
+    margin: 1.5rem 0 1rem;
+    font-size: 2.5rem;
+}
+
+.termsPage h2 {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.5rem;
+}
+
+.termsPage h3 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.termsPage li {
+    margin-bottom: 0.75rem;
+}
+
+.termsPage a,
+.termsHome {
+    color: #0b4f88;
+}
+
+.termsDisclaimer {
+    margin-top: 2rem;
+}
+
+.termsDetails p {
+    margin: 0.25rem 0;
+}
+
+.termsFooter {
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    font-size: 1rem;
 }
 
 #privacyModal {
@@ -581,8 +671,10 @@ footer {
         margin-bottom: 40px;
     }
     #footerText {
-        order: 3;
         font-size: 1rem;
+    }
+    .footerBrandStack {
+        order: 3;
     }
 }
 
